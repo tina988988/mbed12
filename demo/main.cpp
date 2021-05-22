@@ -17,7 +17,7 @@ void servo_control(int speed) {
    if (speed > 200)       speed = 200;
    else if (speed < -200) speed = -200;
 
-   servo=(CENTER_BASE - speed)/20000.0f;
+   servo=(CENTER_BASE + speed)/20000.0f;
 }
 
 void encoder_control() {
@@ -42,7 +42,7 @@ int main() {
    while(k == 0) {
 
    
-   servo_control(27);
+   servo_control(-27);
 
    steps = 0;
    t.reset();
@@ -56,7 +56,7 @@ int main() {
    k = 1;
    }
    while(k == 1) {
-   servo_control(44.43);
+   servo_control(40.03);
 
    steps = 0;
    t.reset();

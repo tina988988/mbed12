@@ -5,10 +5,10 @@
 PwmOut servo(D11);
 
 void servo_control(int speed) {
-   if (speed > 200)       speed = 200;
-   else if (speed < -200) speed = -200;
+   //if (speed > 200)       speed = 200;
+   //else if (speed < -200) speed = -200;
 
-   //speed = 0;
+   speed = 0;
    servo = (CENTER_BASE + speed)/20000.0f;
 }
 
